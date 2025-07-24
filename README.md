@@ -1,47 +1,76 @@
-# 🌐 **Phantom Metal Taste** 🌐
+# Phantom Metal Taste
 
-![Banner](https://i.imgur.com/5JZwT9r.png)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Status](https://img.shields.io/badge/status-experimental-orange.svg)
+![Irony](https://img.shields.io/badge/irony-DISTINCT-red.svg)
 
-**A database project that reveals the subtle dissonance between intention and reality in corporate environments.**
+## Overview
 
----
+**Phantom Metal Taste** is an advanced multi-model database architecture designed to capture, analyze, and visualize the complex relationship between corporate initiatives and their outcomes.
 
-## 🔍 **Why?**
+The project leverages cutting-edge graph and semantic database technologies to model organizational dynamics with unprecedented fidelity, revealing patterns that traditional relational databases cannot express.
 
-In the age of data-driven decision-making, even the most well-intentioned systems can produce unintended consequences.  
-This project explores how modern database technologies—**ArangoDB** (graph) and **Virtuoso** (semantic web)—can be used to map not just *what* happens, but *why* it happens, in ways that defy conventional wisdom.
+> *"The taste of metal in your mouth when nothing is there—a phantom sensation that feels undeniably real yet fundamentally wrong."*
 
----
+## Technical Architecture
 
-## 📦 **What You'll Find Here**
+This project employs a sophisticated stack:
 
-- 🔗 **ArangoDB Graph Setup**: A multi-model database schema modeling employee initiatives and their... *unspoken outcomes*.
-- 🌍 **Virtuoso Ontology**: A formal RDF/SPARQL schema defining the semantics of "corporate synergy" and its measurable impacts.
-- 🦀 **Rust Core**: A planned WebAssembly module to handle sensitive data transformations (work in progress).
-- 📊 **Analytical Dashboards**: TypeScript/Bun scripts to orchestrate data flows and generate reports that tell two stories at once.
-- 📜 **Enterprise Architecture Artifacts**: TOGAF ADM phases, UML diagrams, and OMG-compliant ontologies for the truly curious.
+- **ArangoDB**: For graph-based modeling of causal relationships
+- **Virtuoso**: For semantic web ontologies and formal knowledge representation
+- **TypeScript/Bun**: For orchestration and API layer
+- **Rust/WebAssembly**: For high-performance core logic
+- **Julia**: For advanced statistical analysis
 
----
+## The SynapCor Case Study
 
-## 🚀 **Getting Started**
+Included with this project is a complete case study of "SynapCor," a fictional tech company implementing a data-driven employee wellness program called the "Synergy Matrix." The case study includes:
 
-### Prerequisites
-- **Bun** (Node.js replacement)
-- **ArangoDB** (v3.11+)
-- **Virtuoso** (Open Source Edition)
-- **Julia** (v1.9+ for advanced analytics)
+- Full UML modeling suite (Use Case, Sequence, State Machine diagrams)
+- TOGAF-compliant enterprise architecture documentation
+- OMG Ontology Definition Metamodel implementation
+- Data Flow Diagrams and Entity-Relationship models
 
-### Quickstart
+This case study serves as both documentation and a demonstration of the system's capabilities.
+
+## Key Features
+
+- **Multi-model persistence**: Store the same conceptual data in different database paradigms to unlock unique analytical capabilities
+- **Causal graph traversal**: Follow the explicit links between actions and consequences
+- **Semantic reasoning**: Apply formal logic to organizational knowledge
+- **Quantified impact analysis**: Measure and visualize the precise effects of organizational decisions
+
+## Getting Started
+
 ```bash
-# Clone the repo
-git clone https://github.com/your-username/phantom-metal-taste.git
-cd phantom-metal-taste
+# Clone the repository
+git clone https://github.com/yourusername/phantom-metal-taste.git
 
 # Install dependencies
+cd phantom-metal-taste
 bun install
 
-# Start ArangoDB and Virtuoso (docker-compose recommended)
+# Start the databases (requires Docker)
 docker-compose up -d
 
-# Seed the database and run initial analysis
+# Run the orchestrator
 bun run src/index.ts
+```
+
+## The Deeper Question
+
+This project asks a fundamental question: What happens when we apply the full rigor of enterprise architecture, formal modeling, and data science to measure the gap between institutional intent and lived reality?
+
+The answer may leave a curious taste in your mouth.
+
+## Contributing
+
+Contributions are welcome. Before submitting a PR, please ensure your code passes all tests and adheres to our modeling standards. See `CONTRIBUTING.md` for details.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+*"The map is not the territory, but sometimes the map reveals what the territory conceals."*
