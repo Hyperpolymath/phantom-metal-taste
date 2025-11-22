@@ -1,0 +1,86 @@
+@startuml Deployment Diagram
+
+node "Client Browser" {
+  [Visualization UI]
+  [API Client]
+}
+
+node "Application Server" {
+  component "Bun Runtime" {
+    [TypeScript API]
+    [InitiativeService]
+    [AnalyticsService]
+    [VisualizationService]
+  }
+
+  component "WASM Module" {
+    [Rust Core]
+    [Gap Calculator]
+    [Gaming Detector]
+  }
+
+  component "Julia Runtime" {
+    [Impact Analysis]
+    [Causal Inference]
+    [Statistical Tests]
+  }
+}
+
+database "ArangoDB" {
+  [Graph Database]
+  [Causal Graph]
+  [Collections]
+}
+
+database "Virtuoso" {
+  [RDF Store]
+  [SPARQL Endpoint]
+  [Ontology]
+}
+
+cloud "Docker Network" {
+  node "arango-container" {
+    [ArangoDB Instance]
+  }
+
+  node "virtuoso-container" {
+    [Virtuoso Instance]
+  }
+}
+
+[Visualization UI] --> [API Client] : HTTPS
+[API Client] --> [TypeScript API] : REST/JSON
+
+[TypeScript API] --> [InitiativeService]
+[TypeScript API] --> [AnalyticsService]
+[TypeScript API] --> [VisualizationService]
+
+[InitiativeService] --> [Rust Core] : FFI/WASM
+[AnalyticsService] --> [Rust Core] : FFI/WASM
+[AnalyticsService] --> [Impact Analysis] : IPC/Subprocess
+
+[InitiativeService] --> [Graph Database] : AQL/HTTP
+[AnalyticsService] --> [Graph Database] : AQL/HTTP
+[InitiativeService] --> [RDF Store] : SPARQL/HTTP
+
+[Graph Database] <--> [ArangoDB Instance] : Docker
+[RDF Store] <--> [Virtuoso Instance] : Docker
+
+note right of [WASM Module]
+  Compiled from Rust
+  for performance-critical
+  calculations
+end note
+
+note bottom of [Julia Runtime]
+  Invoked via subprocess
+  for statistical analysis
+end note
+
+note bottom of cloud
+  Databases run in
+  isolated containers
+  with health checks
+end note
+
+@enduml
