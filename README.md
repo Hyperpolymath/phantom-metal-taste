@@ -3,24 +3,43 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/status-experimental-orange.svg)
 ![Irony](https://img.shields.io/badge/irony-DISTINCT-red.svg)
+![Stack](https://img.shields.io/badge/stack-ReScript%2BDeno-blueviolet.svg)
 
 ## Overview
 
 **Phantom Metal Taste** is an advanced multi-model database architecture designed to capture, analyze, and visualize the complex relationship between corporate initiatives and their outcomes.
 
-The project leverages cutting-edge graph and semantic database technologies to model organizational dynamics with unprecedented fidelity, revealing patterns that traditional relational databases cannot express.
+The project leverages cutting-edge graph and semantic database technologies, implemented in a modern functional programming language (ReScript) and secure runtime (Deno), to model organizational dynamics with unprecedented fidelity.
 
 > *"The taste of metal in your mouth when nothing is there—a phantom sensation that feels undeniably real yet fundamentally wrong."*
 
 ## Technical Architecture
 
-This project employs a sophisticated stack:
+This project employs a sophisticated polyglot stack:
 
+- **ReScript**: Type-safe functional programming language (compiles to JavaScript)
+- **Deno**: Secure JavaScript/TypeScript runtime with modern tooling
 - **ArangoDB**: For graph-based modeling of causal relationships
 - **Virtuoso**: For semantic web ontologies and formal knowledge representation
-- **TypeScript/Bun**: For orchestration and API layer
 - **Rust/WebAssembly**: For high-performance core logic
 - **Julia**: For advanced statistical analysis
+
+## Why ReScript + Deno?
+
+**ReScript** provides:
+- **Sound type system** - impossible states are unrepresentable
+- **100% type coverage** - if it compiles, it works
+- **Functional paradigm** - immutable, pure functions
+- **Fast compilation** - ~1ms per file
+- **Zero-cost abstractions** - optimized JavaScript output
+
+**Deno** provides:
+- **Security first** - explicit permissions model
+- **Modern standards** - ES modules, Web APIs
+- **Built-in tooling** - test runner, formatter, linter
+- **No node_modules** - URL-based imports
+
+See [RESCRIPT_MIGRATION.md](RESCRIPT_MIGRATION.md) for detailed rationale.
 
 ## The SynapCor Case Study
 
@@ -39,23 +58,43 @@ This case study serves as both documentation and a demonstration of the system's
 - **Causal graph traversal**: Follow the explicit links between actions and consequences
 - **Semantic reasoning**: Apply formal logic to organizational knowledge
 - **Quantified impact analysis**: Measure and visualize the precise effects of organizational decisions
+- **Gaming detection**: Statistical analysis to identify manipulated metrics
+- **Metric theater detection**: Identify measurements that are never acted upon
 
 ## Getting Started
+
+### Prerequisites
+
+1. **ReScript compiler**:
+   ```bash
+   npm install -g rescript
+   ```
+
+2. **Deno runtime**:
+   ```bash
+   curl -fsSL https://deno.land/install.sh | sh
+   ```
+
+3. **Docker & Docker Compose**: For databases
+
+### Quick Start
 
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/phantom-metal-taste.git
-
-# Install dependencies
 cd phantom-metal-taste
-bun install
+
+# Build ReScript code
+deno task build
 
 # Start the databases (requires Docker)
-docker-compose up -d
+deno task db:up
 
 # Run the orchestrator
-bun run src/index.ts
+deno task dev
 ```
+
+See [QUICKSTART.md](QUICKSTART.md) for a 5-minute getting started guide.
 
 ## The Deeper Question
 
@@ -63,13 +102,38 @@ This project asks a fundamental question: What happens when we apply the full ri
 
 The answer may leave a curious taste in your mouth.
 
+## Documentation
+
+- **[QUICKSTART.md](QUICKSTART.md)** - Get running in 5 minutes
+- **[RESCRIPT_MIGRATION.md](RESCRIPT_MIGRATION.md)** - Why ReScript + Deno
+- **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Complete technical overview
+- **[docs/SETUP.md](docs/SETUP.md)** - Detailed setup guide
+- **[CLAUDE.md](CLAUDE.md)** - AI development guidelines
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines
+
 ## Contributing
 
-Contributions are welcome. Before submitting a PR, please ensure your code passes all tests and adheres to our modeling standards. See `CONTRIBUTING.md` for details.
+Contributions are welcome. Before submitting a PR, please ensure:
+- ReScript code compiles without warnings
+- All tests pass: `deno task test`
+- Documentation is updated
+- The philosophical tone is maintained
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## The Meta-Statement
+
+This system measures organizational delusion using the most rigorous tools available:
+- Sound type system (ReScript)
+- Formal ontologies (OWL/RDF)
+- Statistical analysis (Julia)
+- Causal graph theory (ArangoDB)
+
+The irony: Building a perfect system to measure imperfect systems.
 
 ---
 
