@@ -1,9 +1,15 @@
 # Phantom Metal Taste
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![License](https://img.shields.io/badge/license-MIT%2BPalimpsest-blue.svg)
 ![Status](https://img.shields.io/badge/status-experimental-orange.svg)
 ![Irony](https://img.shields.io/badge/irony-DISTINCT-red.svg)
 ![Stack](https://img.shields.io/badge/stack-ReScript%2BDeno-blueviolet.svg)
+
+![RSR Compliance](https://img.shields.io/badge/RSR-Bronze-cd7f32)
+![Type Safety](https://img.shields.io/badge/types-sound-brightgreen)
+![Memory Safety](https://img.shields.io/badge/memory-safe-brightgreen)
+![Offline First](https://img.shields.io/badge/offline-capable-blue)
+![TPCF](https://img.shields.io/badge/TPCF-Perimeter%203-yellow)
 
 ## Overview
 
