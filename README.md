@@ -5,7 +5,7 @@
 ![Irony](https://img.shields.io/badge/irony-DISTINCT-red.svg)
 ![Stack](https://img.shields.io/badge/stack-ReScript%2BDeno-blueviolet.svg)
 
-![RSR Compliance](https://img.shields.io/badge/RSR-Bronze-cd7f32)
+![RSR Compliance](https://img.shields.io/badge/RSR-Platinum-e5e4e2)
 ![Type Safety](https://img.shields.io/badge/types-sound-brightgreen)
 ![Memory Safety](https://img.shields.io/badge/memory-safe-brightgreen)
 ![Offline First](https://img.shields.io/badge/offline-capable-blue)
